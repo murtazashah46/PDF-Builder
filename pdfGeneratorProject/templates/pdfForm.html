@@ -2,60 +2,60 @@
 {% block title %}Convert{% endblock title %}
 {% block body %}
 <div class="container justify-content-center align-items-center d-flex mt-5">
-  <div class="col-4">
+  <div class="col-12" style="border: 1px solid lightgray; padding: 2rem; border-radius: 0.5rem; font-weight: 500;">
     <form class="row g-3" method="POST" action="/convert" enctype="multipart/form-data">
       {% csrf_token %} 
-      <div class="col-12">
-        <label for="inputAddress" class="form-label">Currency</label>
-        <input type="text" class="form-control" id="name" name="currency" placeholder="Enter the Currency">
+      <div class="col-2">
+        <label for="inputAddress" class="form-label">Currency:</label>
+        <input type="text" class="form-control" id="name" name="currency" placeholder="Currency">
       </div>
-      <div class="col-12">
-        <label for="inputAddress2" class="form-label">Amount In Figures</label>
-        <input type="number" class="form-control" id="class" name="amount_in_figures" placeholder="Enter the amount in figures">
+      <div class="col-3">
+        <label for="inputAddress2" class="form-label">Amount In Figures:</label>
+        <input type="number" class="form-control" id="class" name="amount_in_figures" placeholder="Amount in figures">
       </div>
-      <div class="col-12">
-        <label for="inputAddress2" class="form-label">Amount In Words</label>
-        <input type="text" class="form-control" id="class" name="amount_in_words" placeholder="Enter the amount in words">
+      <div class="col-7">
+        <label for="inputAddress2" class="form-label">Amount In Words:</label>
+        <input type="text" class="form-control" id="class" name="amount_in_words" placeholder="Amount in words">
       </div>
-      <div class="col-12">
-        <label for="inputAddress2" class="form-label">Account Number</label>
-        <input type="number" class="form-control" id="class" name="account_number" placeholder="Enter the last 3 digits of account number">
+      <div class="col-2">
+        <label for="inputAddress2" class="form-label">Acc No:</label>
+        <input type="number" class="form-control" id="class" name="account_number" placeholder="Last 3 digits">
       </div>
-      <div class="col-12">
-        <label for="inputAddress2" class="form-label">Beneficiary Name</label>
-        <input type="text" class="form-control" id="class" name="beneficiary_name" placeholder="Enter the beneficiary's name">
+      <div class="col-4">
+        <label for="inputAddress2" class="form-label">Beneficiary Name:</label>
+        <input type="text" class="form-control" id="class" name="beneficiary_name" placeholder="Beneficiary's name">
       </div>
-      <div class="col-12">
-        <label for="inputAddress2" class="form-label">Beneficiary Address</label>
-        <input type="text" class="form-control" id="class" name="beneficiary_address" placeholder="Enter the beneficiary's address">
+      <div class="col-6">
+        <label for="inputAddress2" class="form-label">Beneficiary Address:</label>
+        <input type="text" class="form-control" id="class" name="beneficiary_address" placeholder="Beneficiary's address">
       </div>
-      <div class="mb-3">
-        <label for="formFile" class="form-label">Bank Reciept</label>
+      <div class="col-3 mb-3">
+        <label for="formFile" class="form-label">Bank Reciept:</label>
         <input class="form-control" type="file" id="formFile" name="IMG_bank_reciept">
       </div>
-      <div class="col-12">
-        <label for="inputAddress2" class="form-label">Reference</label>
-        <input type="text" class="form-control" id="class" name="reference" placeholder="Enter the beneficiary's reference">
+      <div class="col-3">
+        <label for="inputAddress2" class="form-label">Reference:</label>
+        <input type="text" class="form-control" id="class" name="reference" placeholder="Beneficiary's reference">
       </div>
-      <div class="col-12">
-        <label for="inputAddress2" class="form-label">Date</label>
+      <div class="col-3">
+        <label for="inputAddress2" class="form-label">Date:</label>
         <input type="date" class="form-control" id="class" name="date" placeholder="Select the date">
       </div>
-      <div class="col-12">
-        <label for="inputAddress2" class="form-label">Due Date</label>
+      <div class="col-3">
+        <label for="inputAddress2" class="form-label">Due Date:</label>
         <input type="date" class="form-control" id="class" name="due_date" placeholder="Select the due date">
       </div>
-      <div class="mb-3">
-        <label for="formFile" class="form-label">Beneficiary Stamp</label>
+      <div class="col-3 mb-3">
+        <label for="formFile" class="form-label">Beneficiary Stamp:</label>
         <input class="form-control" type="file" id="formFile" name="IMG_beneficiary_stamp">
       </div>
-      <div class="col-12">
-        <label for="inputAddress2" class="form-label">Country</label>
-        <input type="text" class="form-control" id="class" name="country" placeholder="Enter the Country">
+      <div class="col-3">
+        <label for="inputAddress2" class="form-label">Country:</label>
+        <input type="text" class="form-control" id="class" name="country" placeholder="Country">
       </div>
-      <div class="col-12">
-        <label for="inputAddress2" class="form-label">Beneficiary Bank Name</label>
-        <input type="text" class="form-control" id="class" name="beneficiary_bank" placeholder="Enter the beneficiary's bank name">
+      <div class="col-6">
+        <label for="inputAddress2" class="form-label">Beneficiary Bank Name:</label>
+        <input type="text" class="form-control" id="class" name="beneficiary_bank" placeholder="Beneficiary's bank name">
       </div>
       <div class="col-12">
         <button type="submit" class="btn btn-primary">Generate PDF</button>
