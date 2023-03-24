@@ -6,78 +6,78 @@ import fitz
 
 listOfCoordinates = [
     {'page_number': 1, 'coordinate_name': "currency", 'x1': 90, 'y1': 125, 'width': 35,
-        'height': 18, 'font_size': 15, 'font_family': 'Arial', 'color': (0, 0, 0)},
+        'height': 18, 'font_size': 15, 'font_file': 'times-ro.ttf', 'color': (0, 0, 0)},
     {'page_number': 1, 'coordinate_name': "amount_in_figures", 'x1': 375, 'y1': 125,
-        'width': 200, 'height': 18, 'font_size': 15, 'font_family': 'Arial', 'color': (0, 0, 0)},
+        'width': 200, 'height': 18, 'font_size': 15, 'font_file': 'times-new-roman.ttf', 'color': (0, 0, 0)},
     {'page_number': 1, 'coordinate_name': "amount_in_words", 'x1': 250, 'y1': 155,
-        'width': 330, 'height': 45, 'font_size': 12, 'font_family': 'Arial', 'color': (0, 0, 0)},
+        'width': 330, 'height': 45, 'font_size': 12, 'font_file': 'times-ro.ttf', 'color': (0, 0, 0)},
     {'page_number': 1, 'coordinate_name': "account_number", 'x1': 438, 'y1': 225,
-        'width': 60, 'height': 18, 'font_size': 14.8, 'font_family': 'Arial', 'color': (0, 0, 0)},
+        'width': 60, 'height': 18, 'font_size': 14.8, 'font_file': 'times-ro.ttf', 'color': (0, 0, 0)},
     {'page_number': 1, 'coordinate_name': "beneficiary_name", 'x1': 165, 'y1': 340,
-        'width': 420, 'height': 18, 'font_size': 12, 'font_family': 'Arial', 'color': (0, 0, 0)},
+        'width': 420, 'height': 18, 'font_size': 12, 'font_file': 'times-ro.ttf', 'color': (0, 0, 0)},
     {'page_number': 1, 'coordinate_name': "beneficiary_address", 'x1': 137, 'y1': 373,
-        'width': 450, 'height': 30, 'font_size': 8.5, 'font_family': 'Arial', 'color': (0, 0, 0)},
+        'width': 450, 'height': 30, 'font_size': 8.5, 'font_file': 'times-ro.ttf', 'color': (0, 0, 0)},
     {'page_number': 1, 'coordinate_name': "IMG_bank_reciept", 'x1': 10, 'y1': 430,
-        'width': 500, 'height': 130, 'font_size': 10, 'font_family': 'Arial', 'color': (0, 0, 0)},
+        'width': 500, 'height': 130, 'font_size': 10, 'font_file': 'times-ro.ttf', 'color': (0, 0, 0)},
 
     {'page_number': 2, 'coordinate_name': "beneficiary_name", 'x1': 45, 'y1': 90,
-        'width': 215, 'height': 30, 'font_size': 12, 'font_family': 'Arial', 'color': (0, 0, 0)},
+        'width': 215, 'height': 30, 'font_size': 12, 'font_file': 'arialbd.ttf', 'color': (0, 0, 0)},
     {'page_number': 2, 'coordinate_name': "beneficiary_address", 'x1': 45, 'y1': 120,
-        'width': 215, 'height': 40, 'font_size': 10, 'font_family': 'Arial', 'color': (0, 0, 0)},
+        'width': 215, 'height': 40, 'font_size': 10, 'font_file': 'arial.ttf', 'color': (0, 0, 0)},
     {'page_number': 2, 'coordinate_name': "reference", 'x1': 465, 'y1': 180, 'width': 100,
-        'height': 15, 'font_size': 10, 'font_family': 'Arial', 'color': (0, 0, 0)},
+        'height': 15, 'font_size': 10, 'font_file': 'Minion Pro Bold.ttf', 'color': (0, 0, 0)},
     {'page_number': 2, 'coordinate_name': "date", 'x1': 465, 'y1': 195, 'width': 80,
-        'height': 15, 'font_size': 10, 'font_family': 'Arial', 'color': (0, 0, 0)},
+        'height': 15, 'font_size': 10, 'font_file': 'Minion Pro Bold.ttf', 'color': (0, 0, 0)},
     {'page_number': 2, 'coordinate_name': "due_date", 'x1': 465, 'y1': 210, 'width': 80,
-        'height': 15, 'font_size': 10, 'font_family': 'Arial', 'color': (0, 0, 0)},
+        'height': 15, 'font_size': 10, 'font_file': 'Minion Pro Bold.ttf', 'color': (0, 0, 0)},
     {'page_number': 2, 'coordinate_name': "IMG_bank_reciept", 'x1': 72, 'y1': 352,
-        'width': 489, 'height': 173, 'font_size': 8, 'font_family': 'Arial', 'color': (0, 0, 0)},
+        'width': 489, 'height': 173, 'font_size': 8, 'font_file': 'Minion Pro Bold.ttf', 'color': (0, 0, 0)},
     {'page_number': 2, 'coordinate_name': "currency", 'x1': 310, 'y1': 605, 'width': 35,
-        'height': 20, 'font_size': 15, 'font_family': 'Arial', 'color': (0, 0, 0)},
+        'height': 20, 'font_size': 15, 'font_file': 'Minion Pro Bold.ttf', 'color': (0, 0, 0)},
     {'page_number': 2, 'coordinate_name': "amount_in_figures", 'x1': 345, 'y1': 605,
-        'width': 200, 'height': 20, 'font_size': 15, 'font_family': 'Arial', 'color': (0, 0, 0)},
+        'width': 200, 'height': 20, 'font_size': 15, 'font_file': 'Minion Pro Bold.ttf', 'color': (0, 0, 0)},
 
     {'page_number': 3, 'coordinate_name': 'beneficiary_name', 'x1': 72, 'y1': 280,
-        'width': 470, 'height': 20, 'font_size': 12, 'font_family': 'Arial', 'color': (0, 0, 0)},
+        'width': 470, 'height': 20, 'font_size': 12, 'font_file': 'BELLB.TTF', 'color': (0, 0, 0)},
     {'page_number': 3, 'coordinate_name': 'beneficiary_address', 'x1': 72, 'y1': 300,
-        'width': 470, 'height': 30, 'font_size': 12, 'font_family': 'Arial', 'color': (0, 0, 0)},
+        'width': 470, 'height': 30, 'font_size': 12, 'font_file': 'BELL.TTF', 'color': (0, 0, 0)},
 
     {'page_number': 4, 'coordinate_name': '', 'x1': 0, 'y1': 0, 'width': 0,
-        'height': 0, 'font_size': 0, 'font_family': '', 'color': ()},
+        'height': 0, 'font_size': 0, 'font_file': '', 'color': ()},
 
     {'page_number': 5, 'coordinate_name': 'beneficiary_name', 'x1': 72, 'y1': 450,
-        'width': 470, 'height': 20, 'font_size': 12, 'font_family': 'Arial', 'color': (0, 0, 0)},
+        'width': 470, 'height': 20, 'font_size': 12, 'font_file': 'BELLB.TTF', 'color': (0, 0, 0)},
     {'page_number': 5, 'coordinate_name': 'IMG_beneficiary_stamp', 'x1': 72, 'y1': 475,
-        'width': 120, 'height': 95, 'font_size': 8, 'font_family': 'Arial', 'color': (0, 0, 0)},
+        'width': 120, 'height': 95, 'font_size': 8, 'font_file': 'BELLB.TTF', 'color': (0, 0, 0)},
 
     {'page_number': 6, 'coordinate_name': 'date', 'x1': 490, 'y1': 95, 'width': 75,
-        'height': 15, 'font_size': 10, 'font_family': 'Arial', 'color': (0, 0, 0)},
+        'height': 15, 'font_size': 10, 'font_file': 'Minion Pro Regular.ttf', 'color': (0, 0, 0)},
     {'page_number': 6, 'coordinate_name': 'account_number', 'x1': 140, 'y1': 240,
-        'width': 100, 'height': 15, 'font_size': 11, 'font_family': 'Arial', 'color': (0, 0, 0)},
+        'width': 100, 'height': 15, 'font_size': 11, 'font_file': 'Minion Pro Regular.ttf', 'color': (0, 0, 0)},
     {'page_number': 6, 'coordinate_name': 'reference', 'x1': 215, 'y1': 330, 'width': 140,
-        'height': 15, 'font_size': 10, 'font_family': 'Arial', 'color': (0, 0, 0)},
+        'height': 15, 'font_size': 10, 'font_file': 'Minion Pro Regular.ttf', 'color': (0, 0, 0)},
     {'page_number': 6, 'coordinate_name': 'date', 'x1': 400, 'y1': 330, 'width': 60,
-        'height': 15, 'font_size': 10, 'font_family': 'Arial', 'color': (0, 0, 0)},
+        'height': 15, 'font_size': 10, 'font_file': 'Minion Pro Regular.ttf', 'color': (0, 0, 0)},
     {'page_number': 6, 'coordinate_name': 'currency', 'x1': 90, 'y1': 360, 'width': 35,
-        'height': 15, 'font_size': 10, 'font_family': 'Arial', 'color': (0, 0, 0)},
+        'height': 15, 'font_size': 10, 'font_file': 'Minion Pro Regular.ttf', 'color': (0, 0, 0)},
     {'page_number': 6, 'coordinate_name': 'amount_in_figures', 'x1': 365, 'y1': 365,
-        'width': 70, 'height': 15, 'font_size': 10, 'font_family': 'Arial', 'color': (0, 0, 0)},
+        'width': 70, 'height': 15, 'font_size': 10, 'font_file': 'Minion Pro Regular.ttf', 'color': (0, 0, 0)},
     {'page_number': 6, 'coordinate_name': 'currency', 'x1': 440, 'y1': 365, 'width': 50,
-        'height': 15, 'font_size': 10, 'font_family': 'Arial', 'color': (0, 0, 0)},
+        'height': 15, 'font_size': 10, 'font_file': 'Minion Pro Regular.ttf', 'color': (0, 0, 0)},
     {'page_number': 6, 'coordinate_name': 'amount_in_words', 'x1': 65, 'y1': 378,
-        'width': 365, 'height': 15, 'font_size': 10, 'font_family': 'Arial', 'color': (0, 0, 0)},
+        'width': 365, 'height': 15, 'font_size': 10, 'font_file': 'Minion Pro Regular.ttf', 'color': (0, 0, 0)},
     {'page_number': 6, 'coordinate_name': 'beneficiary_name', 'x1': 190, 'y1': 450,
-        'width': 380, 'height': 15, 'font_size': 10, 'font_family': 'Arial', 'color': (0, 0, 0)},
+        'width': 380, 'height': 15, 'font_size': 10, 'font_file': 'Minion Pro Regular.ttf', 'color': (0, 0, 0)},
     {'page_number': 6, 'coordinate_name': 'beneficiary_address', 'x1': 70, 'y1': 470,
-        'width': 245, 'height': 18, 'font_size': 7, 'font_family': 'Arial', 'color': (0, 0, 0)},
+        'width': 245, 'height': 18, 'font_size': 7, 'font_file': 'Minion Pro Regular.ttf', 'color': (0, 0, 0)},
     {'page_number': 6, 'coordinate_name': 'country', 'x1': 355, 'y1': 470, 'width': 140,
-        'height': 15, 'font_size': 11, 'font_family': 'Arial', 'color': (0, 0, 0)},
+        'height': 15, 'font_size': 11, 'font_file': 'Minion Pro Regular.ttf', 'color': (0, 0, 0)},
     {'page_number': 6, 'coordinate_name': 'beneficiary_bank', 'x1': 135, 'y1': 488,
-        'width': 180, 'height': 12, 'font_size': 10, 'font_family': 'Arial', 'color': (0, 0, 0)},
+        'width': 180, 'height': 12, 'font_size': 10, 'font_file': 'Minion Pro Regular.ttf', 'color': (0, 0, 0)},
     {'page_number': 6, 'coordinate_name': 'country', 'x1': 355, 'y1': 485, 'width': 140,
-        'height': 15, 'font_size': 11, 'font_family': 'Arial', 'color': (0, 0, 0)},
+        'height': 15, 'font_size': 11, 'font_file': 'Minion Pro Regular.ttf', 'color': (0, 0, 0)},
     {'page_number': 6, 'coordinate_name': 'date', 'x1': 485, 'y1': 520, 'width': 75,
-        'height': 15, 'font_size': 10, 'font_family': 'Arial', 'color': (0, 0, 0)}
+        'height': 15, 'font_size': 10, 'font_file': 'Minion Pro Regular.ttf', 'color': (0, 0, 0)}
 ]
 
 
@@ -91,14 +91,14 @@ def convert_coordinates_to_page_details(coordinates_list):
         width = coordinate['width']
         height = coordinate['height']
         font_size = coordinate['font_size']
-        font_family = coordinate['font_family']
+        font_file = coordinate['font_file']
         color = coordinate['color']
 
         if page_number not in page_details:
             page_details[page_number] = []
         if coordinate_name != '':
             page_details[page_number].append(
-                (coordinate_name, [x1, y1, x1+width, y1+height, font_size, font_family, color]))
+                (coordinate_name, [x1, y1, x1+width, y1+height, font_size, font_file, color]))
     return page_details
 
 # Create your views here.
@@ -139,7 +139,7 @@ def convertPDF(request):
 def pdfGenerator(request, pdf_doc, page_details):
     # loop through the page of the PDF
     for page_number, page in enumerate(pdf_doc, start=1):
-        for field_name, (x1, y1, width, height, font_size, font_family, color) in page_details[page_number]:
+        for field_name, (x1, y1, width, height, font_size, font_file, color) in page_details[page_number]:
             # create a new box with the desired coordinates
             box = fitz.Rect(x1, y1, width, height)
 
@@ -177,7 +177,7 @@ def pdfGenerator(request, pdf_doc, page_details):
                 # shape.finish(fill = (1,0,1))
                 # shape.commit()
 
-                options = {"fontname" : "Times-Roman", "fontsize" : font_size, "color" : color, "align": 0}
+                options = {"fontsize":font_size, "fontfile":"./static/Fonts/"+font_file, "color":color, "align": 0}
                 page.insert_textbox(box, field_value, **options)
 
     path, fileName = createFilePathAndFileName()
