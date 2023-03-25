@@ -2,6 +2,7 @@ from datetime import datetime
 from django.shortcuts import render, HttpResponse
 from django.http import FileResponse
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 import fitz
 
 listOfCoordinates = [
@@ -103,11 +104,7 @@ def convert_coordinates_to_page_details(coordinates_list):
 
 # Create your views here.
 
-
-def index(request):
-    return render(request, 'index.html')
-
-
+@login_required
 def convertPDF(request):
     if request.method == 'POST':
 
