@@ -127,6 +127,11 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 #Added Manually
+
 STATICFILES_DIRS = [
     BASE_DIR / "static",
 ]
+
+MESSAGE_TAGS = {
+    messages.ERROR : 'danger'
+}

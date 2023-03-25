@@ -1,9 +1,8 @@
-from datetime import datetime
-from django.shortcuts import render, HttpResponse
-from django.http import FileResponse
-from django.contrib import messages
-from django.contrib.auth.decorators import login_required
 import fitz
+from datetime import datetime
+from django.http import FileResponse
+from django.contrib.auth.decorators import login_required
+from django.shortcuts import render, redirect
 
 listOfCoordinates = [
     {'page_number': 1, 'coordinate_name': "currency", 'x1': 90, 'y1': 125, 'width': 35,
@@ -125,8 +124,6 @@ def convertPDF(request):
 
         # Set the filename for the download
         response['Content-Disposition'] = f'attachment; filename={ fileName }'
-
-        #messages.success(request, 'The file has been downloaded!')
 
         return response
 
