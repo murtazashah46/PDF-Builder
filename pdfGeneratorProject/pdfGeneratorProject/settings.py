@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-thtszzzkft2)#bb#5xeqz%hu30ajnx82y7j05ddpwt2dqgi$bf
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['http://inv.okapifinance.com', '127.0.0.1']
 
 
 # Application definition

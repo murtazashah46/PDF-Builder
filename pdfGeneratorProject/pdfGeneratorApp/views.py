@@ -150,9 +150,14 @@ def pdfGenerator(request, pdf_doc, page_details):
                 if field_name == "amount_in_figures":
                     amount = int(field_value)
                     field_value = '{:,}'.format(amount).replace(',', ' ')
-                    
+                    amount = field_value
+
+                if field_name == "currency":
+                    currency = field_value
+
                 if page_number == 3:
                     if field_name == "beneficiary_name":
+                        beneficiaryName = field_value
                         field_value += " en ses bureaux sis Business"
                     else:
                         field_value += ' (hereinafter called "Partenaire")'
@@ -168,22 +173,17 @@ def pdfGenerator(request, pdf_doc, page_details):
                 options = {"fontname":font_family, "fontsize":font_size, "color":color}
                 page.insert_textbox(box, field_value, **options)
 
-    path, fileName = createFilePathAndFileName()
+    path, fileName = createFilePathAndFileName(beneficiaryName, amount, currency)
 
     pdf_doc.save(path)
 
     return path, fileName
 
 
-def createFilePathAndFileName():
-    # Generate the current datetime
-    now = datetime.now()
+def createFilePathAndFileName(beneficiaryName, amount, currency):
 
-    # Convert the datetime object to a string with a custom format and remove the space between characters
-    now_str = now.strftime("%Y%m%d %H%M%S").replace(" ", '_')
+    path = f"./static/pdfTemplates/coverted_files/TR_{beneficiaryName} {amount} {currency}.pdf"
 
-    path = f"./static/pdfTemplates/coverted_files/{now_str}-processed_template.pdf"
-
-    fileName = f"{now_str}-processed_template.pdf"
+    fileName = f"TR_{beneficiaryName} {amount} {currency}.pdf"
 
     return path, fileName
