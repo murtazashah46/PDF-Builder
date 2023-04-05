@@ -3,6 +3,8 @@ from datetime import datetime
 from django.http import FileResponse
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
+from django.views.decorators.csrf import csrf_exempt
+
 
 listOfCoordinates = [
     {'page_number': 1, 'coordinate_name': "currency", 'x1': 90, 'y1': 125, 'width': 35,
@@ -104,6 +106,7 @@ def convert_coordinates_to_page_details(coordinates_list):
 # Create your views here.
 
 @login_required
+@csrf_exempt
 def convertPDF(request):
     if request.method == 'POST':
 

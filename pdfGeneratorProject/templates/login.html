@@ -1,18 +1,18 @@
 {% extends 'base.html' %}
 {% block title %}Login{% endblock title %}
 {% block body %}
-    <div class="container justify-content-center align-items-center d-flex mt-5" style="max-width: 1650px;">
-        <div class="col-12" style="border: 1px solid lightgray; padding: 2rem; border-radius: 0.5rem; font-weight: 500;">
+    <div class="container justify-content-center align-items-center d-flex mt-5">
+        <div class="col-12 p-4 border rounded-3" style="background-color: white; box-shadow: 0rem 0.5rem 2rem rgba(0, 0, 0, 0.6) !important;">
             <form  method="POST" action=''>
                 {% csrf_token %} 
 
                 <div class="mb-3">
-                    <label for="exampleInputUsername" class="form-label">User Name</label>
+                    <label for="exampleInputUsername" class="form-label lables">User Name:</label>
                     <input type="text" class="form-control" name="username" aria-describedby="emailHelp">
                 </div>
 
                 <div class="mb-3">
-                    <label for="exampleInputPassword" class="form-label">Password</label>
+                    <label for="exampleInputPassword" class="form-label lables">Password:</label>
                     <input type="password" class="form-control" name="password">
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>

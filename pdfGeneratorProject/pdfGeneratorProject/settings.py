@@ -28,8 +28,10 @@ SECRET_KEY = 'django-insecure-thtszzzkft2)#bb#5xeqz%hu30ajnx82y7j05ddpwt2dqgi$bf
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['http://inv.okapifinance.com', '127.0.0.1']
+ALLOWED_HOSTS = ['http://inv.okapifinance.com', 'inv.okapifinance.com', '127.0.0.1']
 
+DATA_UPLOAD_MAX_MEMORY_SIZE = 52428800  # 50 megabytes
+FILE_UPLOAD_MAX_MEMORY_SIZE = 52428800  # 50 megabytes
 
 # Application definition
 
