@@ -4,6 +4,7 @@ from django.http import FileResponse
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 from django.views.decorators.csrf import csrf_exempt
+import re
 
 
 listOfCoordinates = [
@@ -182,11 +183,17 @@ def pdfGenerator(request, pdf_doc, page_details):
 
     return path, fileName
 
-
 def createFilePathAndFileName(beneficiaryName, amount, currency):
 
-    path = f"./static/pdfTemplates/coverted_files/TR_{beneficiaryName} {amount} {currency}.pdf"
+    fileNameFormat = remove_special_characters(f"{beneficiaryName} {amount} {currency}")
 
-    fileName = f"TR_{beneficiaryName} {amount} {currency}.pdf"
+    path = f"./static/pdfTemplates/coverted_files/TR_{fileNameFormat}.pdf"
+
+    fileName = f"TR_{fileNameFormat}.pdf"
 
     return path, fileName
+
+def remove_special_characters(input_string):
+    # Replace all non-alphanumeric characters with an empty string
+    output_string = re.sub(r'[^a-zA-Z0-9\s]', '', input_string)
+    return output_string
