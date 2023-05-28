@@ -12,7 +12,7 @@ def login_user(request):
         if user is not None:
             login(request, user)
             # Redirect to a success page.
-            return redirect('pdfForm')
+            return redirect('pdf_Templates')
         else:
             # Return an 'invalid login' error message.
             messages.warning(request,'Login Failed! Please Try Again')
